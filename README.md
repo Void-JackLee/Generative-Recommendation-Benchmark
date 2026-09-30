@@ -8,6 +8,9 @@ To install all required dependencies, run the following command in the project r
 pip install -r requirements.txt
 ```
 
+NNI is optional. Direct training with Python or Accelerate does not require it.
+Install `nni==2.10.1` separately only if you use NNI for experiment tuning.
+
 ## Parameter Details
 
 The project parameters are organized into three parts: **overall**, **model**, and **tokenizer**.  

@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 from typing import Dict, Any
 from omegaconf import DictConfig, OmegaConf
-import nni
 
 
 def get_nni_params() -> Dict[str, Any]:
 
     try:
+        import nni
+
         nni_params = nni.get_next_parameter()
         # logger.info(f"Using NNI parameters: {nni_params}")
         return nni_params
@@ -40,6 +41,7 @@ def update_config_with_nni(config: DictConfig, nni_params: Dict[str, Any]) -> Di
 def report_nni_metrics(metrics: Dict[str, float], is_final: bool = False, callback=None):  
 
     try:  
+        import nni
 
         main_metric_key = "eval_hit@5"
         current_score = metrics.get(main_metric_key, float('-inf'))

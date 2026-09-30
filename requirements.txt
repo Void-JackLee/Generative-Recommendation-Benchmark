@@ -7,4 +7,4 @@ tqdm==4.64.1
 transformers==4.56.2
 hydra-core
 omegaconf
-nni==2.10.1
+# Optional: install nni==2.10.1 for NNI experiment tuning.

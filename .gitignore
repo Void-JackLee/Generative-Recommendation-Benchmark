@@ -12,8 +12,10 @@
 /outputs/
 /scripts/
 /output/
-/data/
+/data/*/
 /predictions.json
 /auto_hyper/
-/data/
 /backed/
+
+Beauty*/
+Toy*/
