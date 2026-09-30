@@ -86,7 +86,7 @@ def convert(source_dir, output_dir, suffix=""):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("source_dir", type=Path)
-    parser.add_argument("--suffix", type=int, default=None)
-    parser.add_argument("--output-dir", type=Path)
+    parser.add_argument("-s", "--suffix", type=int, default=None)
+    parser.add_argument("-o", "--output-dir", type=Path)
     args = parser.parse_args()
     convert(args.source_dir, args.output_dir or args.source_dir / (f"pkl_{args.suffix}" if args.suffix else "pkl"), suffix=args.suffix)
